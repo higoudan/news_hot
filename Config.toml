@@ -1,0 +1,6 @@
+[init]
+cron = "0   */1   *   *   *  *  *"
+[newshot]
+base_url = "https://www.toutiao.com/api/pc/feed/?category=news_hot"
+perfix_url = "https://www.toutiao.com"
+dingtalk_url = "https://oapi.dingtalk.com/robot/send?access_token=fa0a90d678fa95a28d597581083c488449c1b3f7cafac3cddd96b8a244b3cad7"
