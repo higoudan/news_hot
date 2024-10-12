@@ -76,7 +76,7 @@ async fn execute_task(config: &config_model::Config) {
     if hots.is_empty() {
         return;
     }
-    let ch_hots: Vec<Vec<model::NewHot>> = hots.chunks(10).map(|chunk| chunk.to_vec()).collect();
+    let ch_hots: Vec<Vec<model::NewHot>> = hots.chunks(20).map(|chunk| chunk.to_vec()).collect();
 
     if ch_hots.is_empty() {
         return;
@@ -111,9 +111,9 @@ async fn sample_markdown_combo(perfixUrl: &str, hots: &Vec<model::NewHot>) -> St
         context.push_str( &url);
         context.push_str("\n");
         
-        context.push_str("- ##### ");
-        context.push_str( &hot.abstract_desc);
-        context.push_str("\n");
+        // context.push_str("- ##### ");
+        // context.push_str( &hot.abstract_desc);
+        // context.push_str("\n");
     }
     return context;
 }
